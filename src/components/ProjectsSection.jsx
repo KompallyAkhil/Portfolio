@@ -4,6 +4,7 @@ import resumeBuilder from "./projects/resume.png";
 import magicBoard from "./projects/magic.png";
 import briefly from "./projects/briefly.png";
 import leetcodolio from "./projects/leet.png"
+import chatPDF from "./projects/chatpdf.png";
 const projects = [
   {
     id: 1,
@@ -37,15 +38,6 @@ const projects = [
   },
   {
     id: 4,
-    title: "LeetCodolio",
-    description: "Automatically builds a portfolio from your LeetCode stats.",
-    image: leetcodolio,
-    tags: ["Next.js", "TailwindCSS", "WebScrapping"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/KompallyAkhil/LeetCodolio",
-  },
-  {
-    id: 5,
     title: "Briefly",
     description:
       "Summarization tool that condenses articles, documents, and notes instantly.",
@@ -54,11 +46,30 @@ const projects = [
     demoUrl: "https://briefly.akhilkompally.app",
     githubUrl: "https://github.com/KompallyAkhil/Briefly",
   },
+  {
+    id: 5,
+    title: "LeetCodolio",
+    description: "Automatically builds a portfolio from your LeetCode stats.",
+    image: leetcodolio,
+    tags: ["Next.js", "TailwindCSS", "WebScrapping"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/KompallyAkhil/LeetCodolio",
+  },
+  {
+    id: 6,
+    title: "ChatPDF",
+    description:
+      "AI-powered tool that allows you to chat with your PDF documents.",
+    image: chatPDF,
+    tags: ["React.js", "Python", "Gemini API Key"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/KompallyAkhil/ChatWithPDF",
+  },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
+   <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Featured <span className="text-primary">Projects</span>
@@ -68,20 +79,10 @@ export const ProjectsSection = () => {
           A selection of my recent work, built for performance, usability, and clean design.
         </p>
 
-        {/* Top row - first 3 projects */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-          {projects.slice(0, 3).map((project) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-        </div>
-
-        {/* Bottom row - centered 2 projects */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          <div className="hidden lg:block" /> {/* Left spacer */}
-          {projects.slice(3).map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-          <div className="hidden lg:block" /> {/* Right spacer */}
         </div>
 
         <div className="text-center mt-12">
