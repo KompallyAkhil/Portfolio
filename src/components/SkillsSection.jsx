@@ -2,49 +2,32 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  // Programming Languages
-  { name: "Java (OOP, DSA)", level: 90, category: "languages" },
-  { name: "JavaScript (ES6)", level: 90, category: "languages" },
-  { name: "Python", level: 85, category: "languages" },
-  { name: "SQL", level: 80, category: "languages" },
+  { name: "Java (OOP, DSA)", image: "/skills/java.png", category: "languages" },
+  { name: "JavaScript (ES6)+", image: "/skills/javascript.png", category: "languages" },
+  { name: "Python", image: "/skills/python.png", category: "languages" },
+  { name: "SQL", image: "/skills/sql.png", category: "languages" },
 
-  // Web Development
-  { name: "HTML/CSS", level: 95, category: "webdev" },
-  { name: "MERN Stack", level: 90, category: "webdev" },
-  { name: "REST API", level: 90, category: "webdev" },
-  { name: "GraphQL", level: 75, category: "webdev" },
+  { name: "HTML/CSS", image: "/skills/htmlcss.png", category: "webdev" },
+  { name: "REST API", image: "/skills/restapi.png", category: "webdev" },
+  { name: "GraphQL", image: "/skills/graphql.png", category: "webdev" },
 
-  // Frameworks & Libraries
-  { name: "React.js", level: 90, category: "frameworks" },
-  { name: "Express.js", level: 85, category: "frameworks" },
+  { name: "React.js", image: "/skills/react.png", category: "frameworks" },
+  { name: "Express.js", image: "/skills/express.png", category: "frameworks" },
 
-  // Databases & Tools
-  { name: "MongoDB", level: 85, category: "databases" },
-  { name: "MySQL", level: 80, category: "databases" },
-  { name: "Redis", level: 75, category: "databases" },
-  { name: "MongoDB Compass", level: 70, category: "databases" },
-  { name: "MySQL Workbench", level: 70, category: "databases" },
+  { name: "MongoDB", image: "/skills/mongodb.png", category: "databases" },
+  { name: "MySQL", image: "/skills/mysql.png", category: "databases" },
+  { name: "Redis", image: "/skills/redis.png", category: "databases" },
 
-  // Dev Tools & Platforms
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Postman", level: 85, category: "tools" },
-  { name: "Talend", level: 70, category: "tools" },
-  { name: "Snowflake", level: 65, category: "tools" },
-  { name: "AWS (Basics)", level: 60, category: "tools" },
-  { name: "Puppeteer", level: 70, category: "tools" },
-  { name: "ShadCN UI", level: 85, category: "tools" },
-  { name: "Chart.js", level: 80, category: "tools" },
-  { name: "Clerk", level: 75, category: "tools" },
-  { name: "getStream.io", level: 75, category: "tools" },
+  { name: "Git/GitHub", image: "/skills/github.png", category: "tools" },
+  { name: "Postman", image: "/skills/postman.png", category: "tools" },
+  { name: "Talend", image: "/skills/talend.png", category: "tools" },
+  { name: "Snowflake", image: "/skills/snowflake.png", category: "tools" },
+  { name: "AWS (Basics)", image: "/skills/aws.png", category: "tools" },
+  { name: "Puppeteer", image: "/skills/puppeteer.png", category: "tools" },
 
-  // Core CS Concepts
-  { name: "Data Structures & Algorithms", level: 90, category: "cs" },
-  { name: "Operating Systems", level: 80, category: "cs" },
-  { name: "DBMS", level: 85, category: "cs" },
-  { name: "Computer Networks", level: 80, category: "cs" },
 ];
 
-const categories = ["all", "languages", "webdev", "frameworks", "databases", "tools", "cs"];
+const categories = ["all", "languages", "webdev", "frameworks", "databases", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -81,25 +64,18 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 rounded-lg shadow-xs card-hover flex flex-col items-center"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg">{skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
+              <img
+                src={skill.image}
+                alt={skill.name}
+                className="w-16 h-16 object-contain mb-4"
+              />
+              <h3 className="font-semibold text-lg text-center">{skill.name}</h3>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
