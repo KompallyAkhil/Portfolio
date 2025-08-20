@@ -5,6 +5,8 @@ import magicBoard from "./projects/magic.png";
 import briefly from "./projects/briefly.png";
 import leetcodolio from "./projects/leet.png"
 import chatPDF from "./projects/chatpdf.png";
+import GitHubCalendar from 'react-github-calendar';
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 const projects = [
   {
     id: 1,
@@ -35,6 +37,7 @@ const projects = [
     tags: ["React", "Node.js", "Google Generative AI"],
     demoUrl: "https://magicboard.akhilkompally.app",
     githubUrl: "https://github.com/KompallyAkhil/MagicBoard",
+    videoSrc: "https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb",
   },
   {
     id: 4,
@@ -69,7 +72,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-   <section id="projects" className="py-24 px-4 relative">
+    <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Featured <span className="text-primary">Projects</span>
@@ -84,8 +87,16 @@ export const ProjectsSection = () => {
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-
         <div className="text-center mt-12">
+          <h1 className="text-xl font-bold">My Github Contributions</h1>
+          <GitHubCalendar
+            username="KompallyAkhil"
+            blockSize={15}
+            blockMargin={5}
+            color="#4c1d95"
+            fontSize={16}
+
+          />
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
@@ -102,11 +113,13 @@ export const ProjectsSection = () => {
 const ProjectCard = ({ project }) => (
   <div className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full max-w-sm">
     <div className="h-48 overflow-hidden">
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-      />
+      <div className="relative">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+      </div>
     </div>
 
     <div className="p-6 flex flex-col flex-grow">
@@ -115,7 +128,7 @@ const ProjectCard = ({ project }) => (
           <span
             key={i}
             className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
-          >
+            >
             {tag}
           </span>
         ))}

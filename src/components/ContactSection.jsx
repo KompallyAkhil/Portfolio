@@ -7,7 +7,9 @@ import {
   Send,
   Twitch,
   Twitter,
+  Code
 } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -102,7 +104,9 @@ export const ContactSection = () => {
                 <a href="https://www.instagram.com/_a_k_h_i_l_27/" target="_blank">
                   <Instagram />
                 </a>
-                
+                <a href="https://leetcode.com/u/AkhilKompally/" target="_blank">
+                  <Code />
+                </a>
               </div>
             </div>
           </div>
