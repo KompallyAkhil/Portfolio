@@ -55,7 +55,7 @@ const projects = [
     description: "Automatically builds a portfolio from your LeetCode stats.",
     image: leetcodolio,
     tags: ["Next.js", "TailwindCSS", "WebScrapping"],
-    demoUrl: "#",
+    demoUrl: "https://leetcodolio.akhilkompally.app",
     githubUrl: "https://github.com/KompallyAkhil/LeetCodolio",
   },
   {
