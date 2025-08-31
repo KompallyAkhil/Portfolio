@@ -6,27 +6,15 @@ import briefly from "./projects/briefly.png";
 import leetcodolio from "./projects/leet.png"
 import chatPDF from "./projects/chatpdf.png";
 import GitHubCalendar from 'react-github-calendar';
-import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 const projects = [
-  {
+   {
     id: 1,
-    title: "CodeConnect",
-    description:
-      "Real-time collaborative coding platform to share and execute code instantly.",
-    image: codeConnect,
-    tags: ["React", "Node.js", "getStream.io"],
-    demoUrl: "https://codeconnect.akhilkompally.app",
-    githubUrl: "https://github.com/KompallyAkhil/codeconnect",
-  },
-  {
-    id: 2,
-    title: "ResumeBuilder",
-    description:
-      "Fast, customizable tool to create professional resumes in minutes.",
-    image: resumeBuilder,
-    tags: ["React", "Node.js", "react-pdf"],
-    demoUrl: "https://resume.akhilkompally.app",
-    githubUrl: "https://github.com/KompallyAkhil/ResumeBuilder",
+    title: "LeetCodolio",
+    description: "Automatically builds a portfolio from your LeetCode stats.",
+    image: leetcodolio,
+    tags: ["React.js", "Chart.js", "WebScrapping",'Node.js'],
+    demoUrl: "https://leetcodolio.akhilkompally.app",
+    githubUrl: "https://github.com/KompallyAkhil/LeetCodolio-Frontend",
   },
   {
     id: 3,
@@ -50,13 +38,25 @@ const projects = [
     githubUrl: "https://github.com/KompallyAkhil/Briefly",
   },
   {
+    id: 2,
+    title: "ResumeBuilder",
+    description:
+      "Fast, customizable tool to create professional resumes in minutes.",
+    image: resumeBuilder,
+    tags: ["React", "Node.js", "react-pdf"],
+    demoUrl: "https://resume.akhilkompally.app",
+    githubUrl: "https://github.com/KompallyAkhil/ResumeBuilder",
+  },
+  
+  {
     id: 5,
-    title: "LeetCodolio",
-    description: "Automatically builds a portfolio from your LeetCode stats.",
-    image: leetcodolio,
-    tags: ["Next.js", "TailwindCSS", "WebScrapping"],
-    demoUrl: "https://leetcodolio.akhilkompally.app",
-    githubUrl: "https://github.com/KompallyAkhil/LeetCodolio",
+    title: "CodeConnect",
+    description:
+      "Real-time collaborative coding platform to share and execute code instantly.",
+    image: codeConnect,
+    tags: ["React", "Node.js", "getStream.io"],
+    demoUrl: "https://codeconnect.akhilkompally.app",
+    githubUrl: "https://github.com/KompallyAkhil/codeconnect",
   },
   {
     id: 6,
