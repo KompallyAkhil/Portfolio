@@ -5,14 +5,24 @@ import magicBoard from "./projects/magic.png";
 import briefly from "./projects/briefly.png";
 import leetcodolio from "./projects/leet.png"
 import chatPDF from "./projects/chatpdf.png";
+import simpleCV from "./projects/swipecv.png";
 import GitHubCalendar from 'react-github-calendar';
 const projects = [
-   {
+  {
+    id: 0,
+    title: "SwipeCV",
+    description: "A Tinder-style platform to swipe through resumes! ",
+    image: simpleCV,
+    tags: ["React JS", "Node.js", "Express.js", "MongoDB"],
+    demoUrl: "https://swipecv.akhilkompally.app",
+    githubUrl: "https://github.com/KompallyAkhil/SwipeCV",
+  },
+  {
     id: 1,
     title: "LeetCodolio",
     description: "Automatically builds a portfolio from your LeetCode stats.",
     image: leetcodolio,
-    tags: ["React.js", "Chart.js", "WebScrapping",'Node.js'],
+    tags: ["React.js", "Chart.js", "WebScrapping", 'Node.js'],
     demoUrl: "https://leetcodolio.akhilkompally.app",
     githubUrl: "https://github.com/KompallyAkhil/LeetCodolio-Frontend",
   },
@@ -47,7 +57,7 @@ const projects = [
     demoUrl: "https://resume.akhilkompally.app",
     githubUrl: "https://github.com/KompallyAkhil/ResumeBuilder",
   },
-  
+
   {
     id: 5,
     title: "CodeConnect",
@@ -128,7 +138,7 @@ const ProjectCard = ({ project }) => (
           <span
             key={i}
             className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
-            >
+          >
             {tag}
           </span>
         ))}
