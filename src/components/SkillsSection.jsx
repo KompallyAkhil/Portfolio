@@ -22,7 +22,7 @@ const skills = [
   { name: "Postman", image: "/skills/postman.png", category: "tools" },
   { name: "Talend", image: "/skills/talend.png", category: "tools" },
   { name: "Snowflake", image: "/skills/snowflake.png", category: "tools" },
-  { name: "AWS (Basics)", image: "/skills/aws.png", category: "tools" },
+  { name: "AWS (Basics)", image: "/skills/aws.svg", category: "tools" },
   { name: "Puppeteer", image: "/skills/puppeteer.png", category: "tools" },
 
 ];
