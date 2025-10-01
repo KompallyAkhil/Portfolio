@@ -11,7 +11,7 @@ export const AboutSection = () => {
           {/* Left Side - About Content */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Frontend Developer & Tech Enthusiast
+              Full Satck Developer & Tech Enthusiast
             </h3>
 
             <p className="text-muted-foreground">

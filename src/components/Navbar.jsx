@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 const navItems = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
@@ -35,7 +35,7 @@ export const Navbar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> AkhilKompally </span>{" "}
+            <span className="text-glow text-foreground"> AkhilKompally's </span>{""}
             Portfolio
           </span>
         </a>
@@ -51,6 +51,7 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
+          <AnimatedThemeToggler/>
         </div>
 
         {/* mobile nav */}
@@ -83,6 +84,7 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <AnimatedThemeToggler/>
           </div>
         </div>
       </div>
