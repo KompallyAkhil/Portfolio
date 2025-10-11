@@ -2,24 +2,25 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  { name: "Java (OOP, DSA)", image: "/skills/java.png", category: "languages" },
-  { name: "JavaScript (ES6)+", image: "/skills/javascript.png", category: "languages" },
-  { name: "Python", image: "/skills/python.png", category: "languages" },
-  { name: "SQL", image: "/skills/sql.png", category: "languages" },
+  { name: "Java (OOP, DSA)", image: "/skills/java.svg", category: "languages" },
+  { name: "JavaScript (ES6)+", image: "/skills/javascript.svg", category: "languages" },
+  { name: "Python", image: "/skills/python.svg", category: "languages" },
 
-  { name: "HTML/CSS", image: "/skills/htmlcss.png", category: "webdev" },
+  { name: "HTML", image: "/skills/html.svg", category: "webdev" },
+  { name: "CSS", image: "/skills/css.svg", category: "webdev" },
   { name: "REST API", image: "/skills/restapi.png", category: "webdev" },
-  { name: "GraphQL", image: "/skills/graphql.png", category: "webdev" },
+  { name: "GraphQL", image: "/skills/graphql.svg", category: "webdev" },
+  { name: "Git", image: "/skills/git.svg", category: "tools" },
 
-  { name: "React.js", image: "/skills/react.png", category: "frameworks" },
+  { name: "React.js", image: "/skills/react.svg", category: "frameworks" },
   { name: "Express.js", image: "/skills/express.png", category: "frameworks" },
 
-  { name: "MongoDB", image: "/skills/mongodb.png", category: "databases" },
-  { name: "MySQL", image: "/skills/mysql.png", category: "databases" },
-  { name: "Redis", image: "/skills/redis.png", category: "databases" },
+  { name: "MongoDB", image: "/skills/mongodb.svg", category: "databases" },
+  { name: "MySQL", image: "/skills/mysql.svg", category: "databases" },
+  { name: "Redis", image: "/skills/redis.svg", category: "databases" },
 
-  { name: "Git/GitHub", image: "/skills/github.png", category: "tools" },
-  { name: "Postman", image: "/skills/postman.png", category: "tools" },
+  { name: "GitHub", image: "/skills/github.svg", category: "tools" },
+  { name: "Postman", image: "/skills/postman.svg", category: "tools" },
   { name: "Talend", image: "/skills/talend.png", category: "tools" },
   { name: "Snowflake", image: "/skills/snowflake.png", category: "tools" },
   { name: "AWS (Basics)", image: "/skills/aws.svg", category: "tools" },
