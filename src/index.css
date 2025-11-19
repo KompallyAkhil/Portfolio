@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Oswald:wght@500;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-neo-bg: #F0F0F0;
+  --color-neo-main: #FF6B6B;
+  --color-neo-accent: #4ECDC4;
+  --color-neo-yellow: #FFE66D;
+  --color-neo-dark: #1A1A1A;
+  --color-neo-white: #FFFFFF;
+
+  --shadow-neo: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-neo-hover: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-neo-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Oswald", sans-serif;
+
+  --border-width-3: 3px;
+}
+
+body {
+  @apply bg-neo-bg text-neo-dark font-sans overflow-x-hidden cursor-none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display font-bold uppercase tracking-tight;
+}
+
+
+@layer components {
+  .neo-btn {
+    @apply px-6 py-3 bg-neo-main text-white font-bold border-3 border-black shadow-neo transition-all duration-200 hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-neo-hover active:translate-x-[5px] active:translate-y-[5px] active:shadow-none;
+  }
+
+  .neo-card {
+    @apply bg-white border-3 border-black shadow-neo p-6;
+  }
+
+  .neo-input {
+    @apply w-full p-3 border-3 border-black shadow-neo focus:outline-none focus:shadow-neo-hover focus:translate-x-[3px] focus:translate-y-[3px] transition-all;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0F0F0;
+  border-left: 3px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6B6B;
+  border: 3px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4ECDC4;
+}
