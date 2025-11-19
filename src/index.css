@@ -20,6 +20,7 @@
   --border-width-3: 3px;
 }
 
+
 body {
   @apply bg-neo-bg text-neo-dark font-sans overflow-x-hidden cursor-none;
 }

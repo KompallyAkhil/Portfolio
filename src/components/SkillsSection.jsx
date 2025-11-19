@@ -12,6 +12,7 @@ const SkillsSection = () => {
         { name: "REST API", image: "/skills/restapi.png", category: "webdev" },
         { name: "GraphQL", image: "/skills/graphql.svg", category: "webdev" },
 
+        
         { name: "React.js", image: "/skills/react.svg", category: "frameworks" },
         { name: "Express.js", image: "/skills/express.png", category: "frameworks" },
 

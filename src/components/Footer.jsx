@@ -9,6 +9,7 @@ const Footer = () => {
         { icon: Mail, href: "mailto:akhilkompally27@gmail.com" }
     ];
 
+    
     return (
         <footer className="bg-neo-dark text-white py-12 border-t-3 border-black">
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">

@@ -73,6 +73,7 @@ const CustomCursor = () => {
     return (
         <>
             {/* Main Ring */}
+            
             <motion.div
                 className="fixed top-0 left-0 rounded-full pointer-events-none z-50 hidden md:block"
                 variants={variants}

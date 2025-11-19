@@ -4,6 +4,7 @@ import { Send } from 'lucide-react';
 
 const ContactSection = () => {
     return (
+        
         <section id="contact" className="py-20 bg-neo-yellow border-b-3 border-black">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto bg-white border-3 border-black shadow-neo p-8 md:p-12">

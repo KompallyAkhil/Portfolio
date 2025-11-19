@@ -83,6 +83,7 @@ const ProjectSection = () => {
         },
     ];
 
+    
     return (
         <section id="projects" className="py-20 bg-neo-white border-b-3 border-black">
             <div className="container mx-auto px-4">
