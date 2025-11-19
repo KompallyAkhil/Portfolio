@@ -69,7 +69,6 @@ const HeroSection = () => {
                     Who Am I?
                 </h2>
 
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
