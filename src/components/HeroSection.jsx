@@ -57,7 +57,7 @@ const HeroSection = () => {
                 >
                     {[...Array(10)].map((_, i) => (
                         <span key={i} className="text-2xl font-bold mx-8">
-                            ★ AVAILABLE FOR HIRE ★ REACT ★ TAILWIND ★ DESIGN ★
+                            ★ FULL STACK DEVELOPER ★ REACT JS ★ TAILWIND ★ DESIGN ★ NODE JS ★ PYTHON ★ JAVASCRIPT ★
                         </span>
                     ))}
                 </motion.div>
@@ -99,14 +99,14 @@ const HeroSection = () => {
                     </motion.div>
                 </div>
 
-                <div className="mt-16 flex justify-center">
+                {/* <div className="mt-16 flex justify-center">
                     <div className="bg-black text-white p-8 border-3 border-neo-main shadow-neo transform rotate-2 max-w-2xl text-center">
                         <p className="text-2xl font-display uppercase">
                             "Design is intelligence made visible." <br />
                             <span className="text-neo-main">- Alina Wheeler</span>
                         </p>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Background Elements (retained) */}
