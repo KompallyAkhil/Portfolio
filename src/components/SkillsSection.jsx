@@ -22,10 +22,11 @@ const SkillsSection = () => {
         { name: "Git", image: "/skills/git.svg", category: "tools" },
         { name: "GitHub", image: "/skills/github.svg", category: "tools" },
         { name: "Postman", image: "/skills/postman.svg", category: "tools" },
-        { name: "Talend", image: "/skills/talend.png", category: "tools" },
+        { name: "Talend", image: "/skills/talend.webp", category: "tools" },
         { name: "Snowflake", image: "/skills/snowflake.png", category: "tools" },
         { name: "AWS (Basics)", image: "/skills/aws.svg", category: "tools" },
         { name: "Puppeteer", image: "/skills/puppeteer.png", category: "tools" },
+        { name : "Jenkins" , image : "/skills/jenkins.svg", category : "tools"}
     ];
 
     const categories = {
