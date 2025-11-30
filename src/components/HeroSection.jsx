@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Education from './Education';
 
 const HeroSection = () => {
     return (
@@ -27,7 +28,8 @@ const HeroSection = () => {
                     </div>
 
                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black mb-6 leading-none uppercase">
-                        Akhil<br />
+                        Akhil
+                        <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-neo-main to-neo-accent stroke-black" style={{ WebkitTextStroke: '3px black' }}>
                             Kompally
                         </span>
@@ -99,14 +101,7 @@ const HeroSection = () => {
                     </motion.div>
                 </div>
 
-                {/* <div className="mt-16 flex justify-center">
-                    <div className="bg-black text-white p-8 border-3 border-neo-main shadow-neo transform rotate-2 max-w-2xl text-center">
-                        <p className="text-2xl font-display uppercase">
-                            "Design is intelligence made visible." <br />
-                            <span className="text-neo-main">- Alina Wheeler</span>
-                        </p>
-                    </div>
-                </div> */}
+                <Education/>
             </div>
 
             {/* Background Elements (retained) */}
