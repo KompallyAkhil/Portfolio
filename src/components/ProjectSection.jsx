@@ -38,7 +38,6 @@ const ProjectSection = () => {
             tags: ["React", "Node.js", "Google Generative AI"],
             demoUrl: "https://magicboard.akhilkompally.app",
             githubUrl: "https://github.com/KompallyAkhil/MagicBoard",
-            videoSrc: "https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb",
         },
         {
             id: 4,
