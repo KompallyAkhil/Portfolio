@@ -1,8 +1,7 @@
 import { JetBrains_Mono, Source_Serif_4, VT323 } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-const siteName = "Portfolio V2";
+const siteUrl = "https://akhilkompally.app";
 
 const vt323 = VT323({
   variable: "--font-display-next",
