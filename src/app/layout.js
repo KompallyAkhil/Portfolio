@@ -57,7 +57,7 @@ export const metadata = {
       "Explore the projects, skills, and experience of Akhil Kompally — AI & Full Stack Engineer.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Akhil Kompally Portfolio",
@@ -69,7 +69,7 @@ export const metadata = {
     title: "Akhil Kompally - AI & Full Stack Engineer",
     description:
       "Portfolio of Akhil Kompally — AI & Full Stack Engineer passionate about crafting scalable web applications and intelligent solutions.",
-    images: ["/twitter-image"],
+    images: ["/twitter-image.jpg"],
   },
   robots: {
     index: true,
