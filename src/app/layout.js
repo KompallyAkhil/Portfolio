@@ -65,10 +65,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@akhilkompally",
+    creator: "@akhilkompally",
     title: "Akhil Kompally - AI & Full Stack Engineer",
     description:
       "Portfolio of Akhil Kompally — AI & Full Stack Engineer passionate about crafting scalable web applications and intelligent solutions.",
-    images: ["/twitter-image.jpg"],
+    images: [`${siteUrl}/twitter-image.jpg`],
   },
   robots: {
     index: true,
