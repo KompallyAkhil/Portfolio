@@ -1,7 +1,7 @@
 import { JetBrains_Mono, Source_Serif_4, VT323 } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
-const siteUrl = "https://akhilkompally.app";
+const siteUrl = "https://www.akhilkompally.app";
 
 const vt323 = VT323({
   variable: "--font-display-next",
