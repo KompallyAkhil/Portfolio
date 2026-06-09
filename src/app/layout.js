@@ -44,7 +44,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
   },
   openGraph: {
     type: "website",
@@ -56,7 +56,7 @@ export const metadata = {
       "Explore the projects, skills, and experience of Akhil Kompally — AI & Full Stack Engineer.",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: `${siteUrl}/opengraph-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Akhil Kompally Portfolio",
