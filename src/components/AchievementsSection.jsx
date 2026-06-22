@@ -83,38 +83,86 @@ function PRRow({ pr }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={`oss-pr-item${open ? " oss-pr-item--open" : ""}`}>
-      {/* Summary row — clickable toggle */}
-      <div className="oss-pr-item__summary" onClick={() => setOpen(!open)}>
-        <div className="oss-pr-item__left">
-          <span className="oss-pr-item__repo">
+    <div
+      className="flex flex-col gap-0 py-3.5 border-t first:border-t-0 first:pt-0 last:pb-0 no-underline"
+      style={{ borderColor: "var(--rule-soft)" }}
+    >
+      {/* Summary row */}
+      <div
+        className="flex items-start justify-between gap-4 cursor-pointer select-none w-full"
+        onClick={() => setOpen(!open)}
+      >
+        <div className="flex flex-col gap-0.5 flex-1 min-w-0">
+          <span
+            className="flex items-center gap-1.5 text-[0.72rem] whitespace-nowrap overflow-hidden text-ellipsis"
+            style={{ fontFamily: "var(--font-mono)", color: "var(--ink-mute)" }}
+          >
             <GitHubIconSm /> {pr.repo} · #{pr.prNumber}
           </span>
-          <span className="oss-pr-item__title">{pr.title}</span>
-          <span className="oss-pr-item__desc">{pr.description}</span>
+          <span
+            className="text-[0.92rem] font-semibold leading-[1.3] transition-colors duration-150"
+            style={{ color: "var(--ink)" }}
+          >
+            {pr.title}
+          </span>
+          <span
+            className="text-[0.8rem] leading-[1.4]"
+            style={{ fontFamily: "var(--font-sans)", color: "var(--ink-mute)" }}
+          >
+            {pr.description}
+          </span>
         </div>
-        <div className="oss-pr-item__right">
-          <span className="oss-pr-item__merged">
+        <div className="flex flex-col items-end gap-1.5 shrink-0 pt-0.5">
+          <span
+            className="inline-flex items-center gap-1 px-2 py-0.5 text-[0.68rem] font-bold uppercase tracking-[0.05em] whitespace-nowrap text-white"
+            style={{ background: "#8957e5" }}
+          >
             <GitMerge size={11} /> Merged
           </span>
-          <ChevronDown size={16} className={`oss-pr-chevron${open ? " oss-pr-chevron--open" : ""}`} />
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-[220ms]`}
+            style={{
+              color: "var(--ink-mute)",
+              transform: open ? "rotate(180deg)" : "rotate(0deg)",
+            }}
+          />
         </div>
       </div>
 
       {/* Expandable details */}
       {open && (
-        <div className="oss-pr-item__dropdown">
-          <ul className="oss-pr-detail-list">
+        <div
+          className="oss-pr-dropdown-enter mt-3 p-4 border border-l-[3px]"
+          style={{
+            background: "var(--bg-surface-hover)",
+            borderColor: "var(--rule-soft)",
+            borderLeftColor: "#8957e5",
+          }}
+        >
+          <ul className="list-none p-0 m-0 mb-3.5 flex flex-col gap-2">
             {pr.details.map((point, i) => (
-              <li key={i} className="oss-pr-detail-item">
-                <span className="oss-pr-detail-bullet">→</span>
+              <li
+                key={i}
+                className="flex gap-2.5 items-start text-[0.85rem] leading-[1.5]"
+                style={{ fontFamily: "var(--font-sans)", color: "var(--ink-soft)" }}
+              >
+                <span className="font-bold shrink-0 mt-px text-[0.8rem]" style={{ color: "#8957e5" }}>→</span>
                 {point}
               </li>
             ))}
           </ul>
           <a
             href={pr.prUrl}
-            className="oss-pr-detail-link"
+            className="inline-flex items-center gap-1.5 border px-4 py-2 text-[0.78rem] font-semibold no-underline transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5"
+            style={{
+              fontFamily: "var(--font-mono)",
+              background: "var(--ink)",
+              color: "var(--bg-surface)",
+              borderColor: "var(--ink)",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "3px 3px 0 var(--ink)")}
+            onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
@@ -129,22 +177,44 @@ function PRRow({ pr }) {
 
 function OSSSCard() {
   return (
-    <article className="bento-card--oss bento-card--oss-full">
-      <div className="oss-header">
-        <div className="oss-header-left">
-          <div className="oss-repo">
+    <article
+      className="flex flex-col justify-between border p-6 transition-transform duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 col-span-full"
+      style={{
+        background: "var(--bg-surface)",
+        borderColor: "var(--rule-soft)",
+        position: "relative",
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "var(--shadow-hard)")}
+      onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
+    >
+      {/* OSS Header */}
+      <div className="flex justify-between items-start mb-5 flex-wrap gap-4">
+        <div className="flex flex-col gap-3">
+          <div
+            className="flex items-center gap-2 text-[0.85rem]"
+            style={{ fontFamily: "var(--font-mono)", color: "var(--ink-mute)" }}
+          >
             <GitHubIconLg />
             <span>Open Source Contributions</span>
           </div>
-          <h3 className="oss-title">Merged Pull Requests</h3>
+          <h3
+            className="m-0 text-[1.25rem] font-semibold leading-[1.2] tracking-tight flex items-center gap-3"
+            style={{ fontFamily: "var(--font-sans)", color: "var(--ink)" }}
+          >
+            Merged Pull Requests
+          </h3>
         </div>
-        <div className="oss-status">
+        <div
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[0.8rem] font-bold uppercase border text-white"
+          style={{ background: "#8957e5", borderColor: "#8957e5", fontFamily: "var(--font-mono)" }}
+        >
           <GitMerge size={14} />
           {pullRequests.length} Merged
         </div>
       </div>
 
-      <div className="oss-pr-list">
+      {/* PR list */}
+      <div className="flex flex-col gap-0 mt-1 flex-1">
         {pullRequests.map((pr) => (
           <PRRow key={pr.prUrl} pr={pr} />
         ))}
@@ -157,34 +227,81 @@ export default function AchievementsSection() {
   return (
     <section id="achievements" className="portfolio-section">
       <SectionHeading number="06" title="Achievements" id="achievements-heading" />
-      <div className="bento-grid">
+
+      <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+        {/* OSS full-width */}
         <OSSSCard />
-        <div className="bento-card bento-card--github">
-          <div className="bento-card__top">
+
+        {/* GitHub */}
+        <div
+          className="col-span-2 flex flex-col border p-6 transition-transform duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 max-md:col-span-full"
+          style={{ background: "var(--bg-surface)", borderColor: "var(--rule-soft)" }}
+          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "var(--shadow-hard)")}
+          onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
+        >
+          <div className="flex items-center gap-2.5 mb-3">
             <GitHubIconLg />
-            <span className="bento-card__badge bento-card__badge--github">GitHub</span>
+            <span
+              className="text-[0.65rem] font-bold px-2.5 py-1 uppercase tracking-[0.08em] text-white"
+              style={{ background: "#2ea043", fontFamily: "var(--font-mono)" }}
+            >
+              GitHub
+            </span>
           </div>
-          <h3 className="bento-card__title">GitHub Activity</h3>
-          <p className="bento-card__subtitle" style={{ marginBottom: "0" }}>Contribution chart</p>
-          <div className="github-chart-container">
+          <h3
+            className="m-0 mb-1.5 text-[1.15rem] font-semibold flex items-center gap-2.5 tracking-tight"
+            style={{ fontFamily: "var(--font-sans)", color: "var(--ink)" }}
+          >
+            GitHub Activity
+          </h3>
+          <p
+            className="m-0 text-[0.9rem] font-medium"
+            style={{ fontFamily: "var(--font-sans)", color: "var(--ink-mute)" }}
+          >
+            Contribution chart
+          </p>
+          <div className="mt-auto w-full py-4 flex justify-center items-center">
             <img
               src="https://ghchart.rshah.org/KompallyAkhil"
               alt="GitHub Contributions"
-              className="github-chart"
+              className="w-full h-auto object-contain block"
             />
           </div>
         </div>
-        <div className="bento-card bento-card--leetcode">
-          <div className="bento-card__top">
-            <span className="bento-card__badge bento-card__badge--leetcode">LeetCode</span>
+
+        {/* LeetCode */}
+        <div
+          className="flex flex-col border p-6 transition-transform duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 max-md:col-span-full"
+          style={{ background: "var(--bg-surface)", borderColor: "var(--rule-soft)" }}
+          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "var(--shadow-hard)")}
+          onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
+        >
+          <div className="flex items-center gap-2.5 mb-3">
+            <span
+              className="text-[0.65rem] font-bold px-2.5 py-1 uppercase tracking-[0.08em] text-white"
+              style={{ background: "#ffa116", fontFamily: "var(--font-mono)" }}
+            >
+              LeetCode
+            </span>
           </div>
-          <h3 className="bento-card__title">Problem Solving</h3>
-          <p className="bento-card__subtitle" style={{ marginBottom: "0" }}>Data Structures &amp; Algorithms</p>
-          <div className="leetcode-chart-container">
+          <h3
+            className="m-0 mb-1.5 text-[1.15rem] font-semibold flex items-center gap-2.5 tracking-tight"
+            style={{ fontFamily: "var(--font-sans)", color: "var(--ink)" }}
+          >
+            Problem Solving
+          </h3>
+          <p
+            className="m-0 text-[0.9rem] font-medium"
+            style={{ fontFamily: "var(--font-sans)", color: "var(--ink-mute)" }}
+          >
+            Data Structures &amp; Algorithms
+          </p>
+          <div className="mt-auto w-full pt-2.5 flex justify-center items-center">
             <img
               src="https://leetcard.jacoblin.cool/AkhilKompally?theme=light&font=Inter&ext=svg"
               alt="LeetCode Stats"
-              className="leetcode-chart"
+              className="w-full max-w-[800px] h-auto block"
+              style={{ mixBlendMode: "darken" }}
             />
           </div>
         </div>

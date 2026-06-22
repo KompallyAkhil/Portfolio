@@ -9,8 +9,8 @@ export const personalInfo = {
   title: "AI & Full Stack Engineer",
   tagline: "Building things that live on the internet",
   location: "India",
-  email: "akhilkompally27@gmail.com", // update with real email
-  resumeUrl: "/Resume/Akhil_Kompally_Resume.pdf", // Add your resume PDF in the public folder
+  email: "akhilkompally27@gmail.com",
+  resumeUrl: "https://drive.google.com/file/d/1Bez4Zr3q2gHXS6HU5irrq7CJJbeebIeM/view?usp=sharing"
 };
 
 export const aboutData = {
@@ -137,7 +137,7 @@ export const educationData = [
     field: "Computer Science & Engineering AIML",
     institution: "Keshav Memorial Engineering College",
     duration: "2022 – 2026",
-    grade: "CGPA: 8.3 / 10",
+    grade: "CGPA: 8.4 / 10",
     // certificateUrl: "/Certificate/PD.png",
   },
   // Add more entries as needed
@@ -198,7 +198,7 @@ export const socialsData = [
   {
     id: "social-resume",
     platform: "Resume",
-    url: "/Resume/Akhil_Kompally_Resume.pdf",
+    url: "https://drive.google.com/file/d/1Bez4Zr3q2gHXS6HU5irrq7CJJbeebIeM/view?usp=sharing",
   },
 ];
 

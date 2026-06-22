@@ -23,20 +23,43 @@ export default function ExperienceSection() {
         }}
       />
       <SectionHeading number="01" title="Experience" id="experience-heading" />
-      <div className="exp-timeline">
+
+      {/* Timeline */}
+      <div className="flex flex-col gap-10">
         {experienceData.map((exp, index) => (
-          <article key={exp.id} className="exp-card">
-            {/* ── Header Row ── */}
-            <div className="exp-card__header">
-              <div className="exp-card__number">
+          <article
+            key={exp.id}
+            className="flex flex-col gap-0 pb-10 border-b last:border-b-0 last:pb-0"
+            style={{ borderColor: "var(--rule-soft)" }}
+          >
+            {/* Header Row */}
+            <div className="flex items-start gap-5 mb-5">
+              {/* Big index number */}
+              <div
+                className="shrink-0 min-w-[56px] leading-none select-none pt-0.5 font-bold"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "2.8rem",
+                  color: "var(--blueprint)",
+                  opacity: 0.15,
+                }}
+              >
                 {String(index + 1).padStart(2, "0")}
               </div>
-              <div className="exp-card__header-info">
-                <h3 className="exp-card__role">{exp.role}</h3>
-                <div className="exp-card__company-row">
+
+              {/* Role + company */}
+              <div className="flex flex-col gap-2 flex-1 min-w-0">
+                <h3
+                  className="m-0 font-bold text-[1.15rem] leading-[1.35] tracking-tight"
+                  style={{ fontFamily: "var(--font-mono)", color: "var(--ink)" }}
+                >
+                  {exp.role}
+                </h3>
+                <div className="flex items-center gap-3 flex-wrap">
                   <a
                     href={exp.companyUrl}
-                    className="exp-card__company"
+                    className="inline-flex items-center gap-1 text-[0.85rem] font-medium no-underline transition-opacity duration-150 hover:opacity-70"
+                    style={{ fontFamily: "var(--font-mono)", color: "var(--blueprint)" }}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -44,37 +67,70 @@ export default function ExperienceSection() {
                     <ArrowUpRight size={12} />
                   </a>
                   {exp.type && (
-                    <span className="exp-card__type">{exp.type}</span>
+                    <span
+                      className="text-[0.68rem] font-semibold px-2.5 py-0.5 uppercase tracking-widest"
+                      style={{ background: "var(--blueprint)", color: "var(--bg)", fontFamily: "var(--font-mono)" }}
+                    >
+                      {exp.type}
+                    </span>
                   )}
                 </div>
               </div>
             </div>
 
-            {/* ── Meta Strip ── */}
-            <div className="exp-card__meta-strip">
-              <span className="exp-card__meta-item">
+            {/* Meta Strip */}
+            <div
+              className="flex items-center gap-6 flex-wrap mb-6 max-sm:flex-col max-sm:items-start max-sm:gap-1.5"
+              style={{ paddingLeft: "76px" }}
+            >
+              <span
+                className="inline-flex items-center gap-1.5 text-[0.78rem]"
+                style={{ fontFamily: "var(--font-mono)", color: "var(--ink-mute)" }}
+              >
                 <Calendar size={13} />
                 {exp.duration}
               </span>
               {exp.location && (
-                <span className="exp-card__meta-item">
+                <span
+                  className="inline-flex items-center gap-1.5 text-[0.78rem]"
+                  style={{ fontFamily: "var(--font-mono)", color: "var(--ink-mute)" }}
+                >
                   <MapPin size={13} />
                   {exp.location}
                 </span>
               )}
             </div>
 
-            {/* ── Bullets ── */}
-            <ul className="exp-card__bullets">
+            {/* Bullets */}
+            <ul
+              className="exp-bullets m-0 mb-6 flex flex-col gap-3 list-none"
+              style={{ paddingLeft: "76px" }}
+            >
               {exp.bullets?.map((b, i) => (
-                <li key={i}>{b}</li>
+                <li
+                  key={i}
+                  className="text-[0.92rem] leading-[1.7]"
+                  style={{ color: "var(--ink-soft)" }}
+                >
+                  {b}
+                </li>
               ))}
             </ul>
 
-            {/* ── Tags ── */}
-            <div className="exp-card__tags">
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2" style={{ paddingLeft: "76px" }}>
               {exp.tags?.map((tag) => (
-                <span key={tag} className="exp-card__tag">
+                <span
+                  key={tag}
+                  className="text-[0.72rem] font-medium px-3 py-1 border text-[length:inherit]"
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    background: "var(--bg-surface)",
+                    borderColor: "var(--rule-soft)",
+                    color: "var(--ink-soft)",
+                    letterSpacing: "0.02em",
+                  }}
+                >
                   {tag}
                 </span>
               ))}
