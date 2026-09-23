@@ -58,7 +58,7 @@ export const projectsData = [
       "A Chrome extension to seamlessly track and upload your competitive programming solutions to GitHub.",
     tags: ["Chrome-Extension","Automation","JavaScript"],
     thumbnail: "/Projects/codesync.png",
-    liveUrl: "https://codesync.akhilkompally.app",
+    liveUrl: "https://codes-ync.akhilkompally.app",
     repoUrl: "https://github.com/KompallyAkhil/CodeSync",
   },
   {
