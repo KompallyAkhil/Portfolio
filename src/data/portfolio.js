@@ -68,7 +68,7 @@ export const projectsData = [
       "A Tinder-style platform to swipe through resumes.",
     tags: ["ReactJS","NodeJS","MongoDB","TailwindCSS","Imagekit.io"],
     thumbnail: "/Projects/swipecv.png",
-    liveUrl: "https://swipecv.akhilkompally.app/",
+    liveUrl: "https://swipecv.vercel.app/",
     repoUrl: "https://github.com/KompallyAkhil/SwipeCV",
   },
   {
@@ -88,7 +88,7 @@ export const projectsData = [
       "A web application that solves handwritten mathematical equations in real-time using a digital canvas and the Gemini Vision API.",
     tags: ["ReactJS", "NodeJS", "Gemini API","Canavas API"],
     thumbnail: "/Projects/magic.png",
-    liveUrl: "https://magicboard.akhilkompally.app",
+    liveUrl: "https://magic-board-chi.vercel.app",
     repoUrl: "https://github.com/KompallyAkhil/MagicBoard",
   },
   {
@@ -98,7 +98,7 @@ export const projectsData = [
       "Summarization tool that condenses articles, documents, and notes instantly.",
     tags: ["ReactJS", "Redis", "Gemini API","NodeJS","Clerk"],
     thumbnail: "/Projects/briefly.png",
-    liveUrl: "https://briefly.akhilkompally.app/",
+    liveUrl: "https://briefly-xi.vercel.app/",
     repoUrl: "https://github.com/KompallyAkhil/Briefly",
   },
   {
@@ -108,7 +108,7 @@ export const projectsData = [
       "Fast, customizable tool to create professional resumes in minutes.",
     tags: ["ReactJS", "Clerk","TailwindCSS","PDF renderer"],
     thumbnail: "/Projects/resumebuilder.png",
-    liveUrl: "https://resumebuilder.akhilkompally.app/",
+    liveUrl: "https://resume-builder-iota-wheat.vercel.app/",
     repoUrl: "https://github.com/KompallyAkhil/ResumeBuilder",
   },
   {
@@ -118,7 +118,7 @@ export const projectsData = [
       "Real-time collaborative coding platform to share and execute code instantly.",
     tags: ["ReactJS","getStream.io","NodeJS"],
     thumbnail: "/Projects/codeconnect.png",
-    liveUrl: "https://codeconnect.akhilkompally.app/",
+    liveUrl: "https://code-connect-beta.vercel.app/",
     repoUrl: "https://github.com/KompallyAkhil/CodeConnect",
   },
 ];
