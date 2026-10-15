@@ -23,7 +23,17 @@ export const aboutData = {
 
 export const experienceData = [
   {
-    id: "exp-snorkel",
+    id:"exp-cognizant",
+    role: "Software Engineer",
+    company: "Cognizant Technology Solutions",
+    companyUrl: "https://www.cognizant.com/",
+    duration: "Jul 2026 - Present",
+    type: "Full Time",
+    location: "Hyderabad, Telangana, India",
+    tags: ["Python", "SQL", "ETL", "Snowflake", "Airflow","Spark","PySpark"],
+  },
+  {
+    id: "exp-teleparadigm",
     role: "Software Engineer Intern",
     company: "Teleparadigm Networks (TPN)",
     companyUrl: "https://teleparadigm.com/",
